@@ -1,3 +1,4 @@
 module.exports={
-  baseUrl : 'http://localhost:3001/'
+  websiteUrl : 'http://localhost:3000/',
+  serverUrl : 'http://localhost:3001/',
 }

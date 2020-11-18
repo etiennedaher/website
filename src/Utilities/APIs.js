@@ -1,6 +1,6 @@
 import axios from "axios"
 import mainConfig from '../mainConfig.js'
-let baseUrl = mainConfig.baseUrl
+let baseUrl = mainConfig.serverUrl
 
 const DEFAULT_TIMEOUT = 30000;
 
@@ -70,16 +70,23 @@ class APIs {
     //TODO: handle exceptions
   }
 
+  getEmployee(employeeId){
+    let url=`${baseUrl}getEmployee?id=${employeeId}`
+    return this.get(url);
+  }
   listEmployees(){
     let url=`${baseUrl}listEmployees`
     return this.get(url);
   }
-
   saveEmployee(employee){
-    let url=`${baseUrl}addEmployee`
-    return this.post(url, employee);
+    if(employee.id){ // update employee
+      let url=`${baseUrl}updateEmployee`
+      return this.put(url, employee);
+    }else{ // add new
+      let url=`${baseUrl}addEmployee`
+      return this.post(url, employee);
+    }
   }
-
   deleteEmployee(employeeId){
     let url=`${baseUrl}deleteEmployee?id=${employeeId}`
     return this.delete(url);

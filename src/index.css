@@ -84,6 +84,17 @@ code {
   border-color: white;
 }
 
+.eachRow .edit {
+  padding-top: 15px;
+  padding-right: 15px;
+  width: 70px;
+  height: 70px;
+  float: right;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: white;
+}
+
 /* add employee page */
 
 .addMainContainer {
