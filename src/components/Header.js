@@ -22,16 +22,13 @@ export default class Header extends Component {
   render(){
     return (
       <Router>
-        <div>
+        <div className="headerContainer">
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/listemployees">List Employees</Link>
             </li>
             <li>
               <Link to="/addemployee">Add Employee</Link>
-            </li>
-            <li>
-              <Link to="/listemployees">List Employees</Link>
             </li>
           </ul>
         </div>

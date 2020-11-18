@@ -15,3 +15,28 @@ code {
 .mainContainer{
 
 }
+
+/* header */
+.headerContainer{
+  background-color: lightgray;
+  height: 100px;
+  align-items: center;
+  width: 100%;
+  color: black;
+  overflow: hidden;
+}
+
+.headerContainer ul {
+
+}
+
+.headerContainer li {
+  display:inline;
+  width : 200px;
+  height: 50px;
+  display: table-cell;
+  vertical-align: bottom;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+}
