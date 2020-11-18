@@ -24,6 +24,19 @@ class APIs {
       })
       .catch(this.exceptionCatcher);
   }
+  delete(url) {
+    const headers = {
+      headers: commonHeaders,
+    };
+    return axios
+      .delete(url, headers)
+      .then((response) => {
+        if(response && response.data && response.data.result){
+          return response.data.data
+        }
+      })
+      .catch(this.exceptionCatcher);
+  }
   post(url, data = {}, exceptionHandler = null) {
     const headers = {
       headers: commonHeaders,
@@ -65,6 +78,11 @@ class APIs {
   saveEmployee(employee){
     let url=`${baseUrl}addEmployee`
     return this.post(url, employee);
+  }
+
+  deleteEmployee(employeeId){
+    let url=`${baseUrl}deleteEmployee?id=${employeeId}`
+    return this.delete(url);
   }
 
 }
