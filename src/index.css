@@ -40,3 +40,56 @@ code {
   text-align: center;
   font-size: 20px;
 }
+
+/* list of employees page */
+.listContainer {
+  background-color: white;
+  height: 600px;
+  overflow: scroll;
+}
+
+/* TODO: center items */
+.eachRow {
+  height: 100px;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: black;
+  margin: 10px;
+}
+
+.eachRow .text {
+  padding-top: 30px;
+  font-size: 30px;
+}
+
+.eachRow .image {
+  padding-top: 0px;
+  width: 100px;
+  height: 100px;
+  float: left;
+  border-width: 2px;
+  border-radius: 10px;
+  border-color: white;
+}
+
+.addMainContainer {
+
+}
+
+.addMainContainer div{
+  margin: 20px;
+}
+
+.inputFields {
+  border-width: 2px;
+  border-radius: 10px;
+  width : 80%;
+  height : 30px;
+}
+.submitButton {
+  border-width: 2px;
+  border-radius: 10px;
+  width: 60%;
+  height : 30px;
+}

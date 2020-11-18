@@ -12,7 +12,7 @@ const commonHeaders = {
 class APIs {
   put(url, data = {}) {
     const headers = {
-      headers: this.commonHeaders,
+      headers: commonHeaders,
       body: data
     };
     return axios
@@ -26,7 +26,7 @@ class APIs {
   }
   post(url, data = {}, exceptionHandler = null) {
     const headers = {
-      headers: this.commonHeaders,
+      headers: commonHeaders,
       body: data,
       timeout: DEFAULT_TIMEOUT,
     };
@@ -42,7 +42,7 @@ class APIs {
   get(url, params) {
     return axios
       .get(url, {
-        headers: this.commonHeaders,
+        headers: commonHeaders,
         timeout: DEFAULT_TIMEOUT,
         params
       })
@@ -60,6 +60,11 @@ class APIs {
   listEmployees(){
     let url=`${baseUrl}listEmployees`
     return this.get(url);
+  }
+
+  saveEmployee(employee){
+    let url=`${baseUrl}addEmployee`
+    return this.post(url, employee);
   }
 
 }
